@@ -1,0 +1,38 @@
+{
+  "name": "react-jsx-closing-bracket-location-reproduction1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.jsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.28.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "react/jsx-indent": ["error", "tab"],
+      "react/jsx-closing-bracket-location": [
+        "error",
+        {
+          "nonEmpty": "tag-aligned",
+          "selfClosing": false
+        }
+      ]
+    }
+  }
+}
